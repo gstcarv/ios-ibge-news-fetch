@@ -1,0 +1,6 @@
+framework module Pods_IBGENews {
+  umbrella header "Pods-IBGENews-umbrella.h"
+
+  export *
+  module * { export * }
+}
