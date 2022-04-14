@@ -19,19 +19,35 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qhh-7z-YpG">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Dta-2P-In6">
+                                    <rect key="frame" x="0.0" y="623.5" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ro2-ai-Fci">
+                                            <rect key="frame" x="0.0" y="12" width="414" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ro2-ai-Fci" secondAttribute="trailing" id="1T9-c1-saS"/>
+                                        <constraint firstItem="ro2-ai-Fci" firstAttribute="leading" secondItem="Dta-2P-In6" secondAttribute="leading" id="1sr-DV-uLK"/>
+                                        <constraint firstAttribute="bottom" secondItem="ro2-ai-Fci" secondAttribute="bottom" constant="12" id="Not-7P-7eQ"/>
+                                        <constraint firstItem="ro2-ai-Fci" firstAttribute="top" secondItem="Dta-2P-In6" secondAttribute="top" constant="12" id="aig-LG-RhR"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="highlightNewsCell" id="eEa-wQ-FaR" customClass="NewsTableViewCell" customModule="IBGENews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="377"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="385"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eEa-wQ-FaR" id="sI4-Sy-lwD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="377"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="385"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adV-UB-9dH" userLabel="CardContainer">
-                                                    <rect key="frame" x="25" y="25" width="364" height="327"/>
+                                                    <rect key="frame" x="25" y="25" width="364" height="335"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QFl-tT-Cvl" userLabel="ContentStack">
-                                                            <rect key="frame" x="0.0" y="0.0" width="364" height="327"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="364" height="335"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xbJ-JT-Siq">
                                                                     <rect key="frame" x="0.0" y="0.0" width="364" height="197"/>
@@ -46,16 +62,16 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoS-cf-bZQ" userLabel="InfoView">
-                                                                    <rect key="frame" x="0.0" y="207" width="364" height="95"/>
+                                                                    <rect key="frame" x="0.0" y="207" width="364" height="103"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cF-IH-Ced">
-                                                                            <rect key="frame" x="0.0" y="8" width="364" height="45"/>
+                                                                            <rect key="frame" x="0.0" y="8" width="364" height="53"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGU-SW-Vwo">
-                                                                            <rect key="frame" x="0.0" y="63" width="364" height="32"/>
+                                                                            <rect key="frame" x="0.0" y="71" width="364" height="32"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="32" id="cYS-wf-cKq"/>
                                                                             </constraints>
@@ -75,7 +91,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y0-jN-Dfe">
-                                                                    <rect key="frame" x="0.0" y="312" width="364" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="320" width="364" height="15"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="15" id="l43-yf-EyJ"/>
                                                                     </constraints>
@@ -113,7 +129,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="simpleNewsCell" id="onF-N0-YaO" customClass="NewsTableViewCell" customModule="IBGENews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="421.5" width="414" height="171.5"/>
+                                        <rect key="frame" x="0.0" y="429.5" width="414" height="171.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="onF-N0-YaO" id="Xqg-g4-N8c">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171.5"/>

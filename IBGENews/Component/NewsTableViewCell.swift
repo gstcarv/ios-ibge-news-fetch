@@ -13,13 +13,6 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var resume: UILabel!
     @IBOutlet weak var postDate: UILabel!
-    
-    func setupSubviews(thumbnail: UIImageView? = nil, title: UILabel? = nil, resume: UILabel? = nil, postDate: UILabel? = nil) {
-        self.thumbnail = thumbnail
-        self.title = title
-        self.resume = resume
-        self.postDate = postDate
-    }
 
     func updateCellData(_ data: NewsInformation) throws {
         title.text = data.titulo

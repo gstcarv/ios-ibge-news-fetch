@@ -10,9 +10,10 @@ import Alamofire
 
 class NewsService {
     
-    func getNews(completion: @escaping (IBGENewsResponse) -> Void) {
+    func getNews(page: Int, completion: @escaping (IBGENewsResponse) -> Void) {
         let params: Parameters = [
-            "qtd": 10
+            "qtd": 10,
+            "page": page
         ]
         
         AF.request(
