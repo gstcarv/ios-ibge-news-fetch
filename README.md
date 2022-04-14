@@ -1,6 +1,6 @@
 <div align="center" style="margin-bottom: 20px">
 
-  <img src="./GithubAssets/logo.png" width="100px" />
+  <img src="./GithubAssets/logo.png" width="300px" />
 
    <h2 align="center">
     IBGE News IOS App
