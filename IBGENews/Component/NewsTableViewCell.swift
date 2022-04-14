@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftDate
 
 class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var thumbnail: UIImageView!
@@ -17,6 +18,9 @@ class NewsTableViewCell: UITableViewCell {
     func updateCellData(_ data: NewsInformation) throws {
         title.text = data.titulo
         resume.text = data.introducao
+        
+        let pubDate = data.data_publicacao!.toDate("dd/MM/yyyy HH:mm:ss")
+        postDate.text = pubDate?.toRelative(style: RelativeFormatter.defaultStyle(), locale: Locales.portugueseBrazil)
         
         let decoder = JSONDecoder()
         let images = try decoder.decode(NewsMedia.self, from: data.imagens.data(using: .utf8)!)

@@ -7,5 +7,6 @@ target 'IBGENews' do
 
   # Pods for IBGENews
   pod 'Alamofire', '~> 5.5'
+  pod 'SwiftDate', '~> 5.0'
 
 end
